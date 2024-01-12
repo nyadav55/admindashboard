@@ -25,7 +25,7 @@ and open the template in the editor.
 <form action="" method="post">
     <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" id="uname" name="uname" >
+    <input type="text" placeholder="Enter Username" id="uname " name="uname" >
 
 <!--    <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>-->
