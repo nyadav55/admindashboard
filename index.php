@@ -19,7 +19,7 @@ and open the template in the editor.
 
     </head>
     <body>
-        <!-- Git changes here -->
+        
         <h2>Login Form</h2>
 
         <form action="" method="post">
