@@ -31,15 +31,9 @@ and open the template in the editor.
     <input type="password" placeholder="Enter Password" name="psw" required>-->
         
 <button type="submit" onclick="loginuser()">Login</button>
-<!--    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>-->
+
   </div>
 
-<!--  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>-->
     <div id="result"></div>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>s
