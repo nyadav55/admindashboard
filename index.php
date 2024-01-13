@@ -43,6 +43,7 @@ and open the template in the editor.
                     <input type="password" placeholder="Enter Password" name="psw" required>-->
 >>>>>>> master
 
+<<<<<<< HEAD
                 <button type="submit" onclick="loginuser()">Login</button>
                 <!--    <label>
                       <input type="checkbox" checked="checked" name="remember"> Remember me
@@ -58,5 +59,19 @@ and open the template in the editor.
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>s
         <script  src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="action.js" type="text/javascript"></script>
+=======
+<!--    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>-->
+        
+<button type="submit" onclick="loginuser()">Login</button>
+
+  </div>
+
+    <div id="result"></div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>s
+<script  src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="action.js" type="text/javascript"></script>
+>>>>>>> dev
     </body>
 </html>
