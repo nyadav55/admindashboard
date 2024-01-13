@@ -8,8 +8,8 @@ function loginuser() {
                 async: true,
                 success: function(data) {
                     alert(data);
-                    
-                    $('#result').html(data);
+                    window.location = "http://localhost/crudapp/view/dashboard.php";
+//                    $('#result').html(data);
                 }
             });
 }
