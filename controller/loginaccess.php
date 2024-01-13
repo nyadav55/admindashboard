@@ -14,17 +14,18 @@ include_once('../connection/conn.php');
     switch ($action) {
         
         case "checkLogin":
-            $username = $_REQUEST['username'];
-             $QUERY = "select userFirstname from useraccount where userFirstname  = '$username'";
-        echo    $result = mysqli_query($mysqli, $QUERY) or die('Could not update member data: ' . mysqli_error());
-    echo    $totalData = mysqli_num_rows($result);
+        echo    $username = $_REQUEST['username'];
+         echo    $QUERY = "select password from userlogin where password = '$username'";
+       echo     $result = mysqli_query($mysqli, $QUERY) or die('Could not have member data: ' . mysqli_error());
+        
 //    echo   $query = $this->connection->query($QUERY);
- exit();
-        if($result ->num_rows > 0){
-            $row = $result ->fetch_array();
-            return $row['id'];
+
+        if(mysqli_num_rows($result) > 0){
+            echo 'Access successfully.';
+            return;
         }
         else{
+            echo 'Access Denied.';
             return false;
         }
             break;

@@ -1,5 +1,6 @@
 function loginuser() {
     var username = $('#uname').val()
+    alert("username "+username);
             $.ajax({
                 type: "GET",
                 url: "controller/loginaccess.php?action=checkLogin&username="+ username,
@@ -7,6 +8,7 @@ function loginuser() {
                 async: true,
                 success: function(data) {
                     alert(data);
+                    
                     $('#result').html(data);
                 }
             });

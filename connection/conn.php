@@ -34,7 +34,7 @@ $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
             printf("Connect failed: %s<br />", $mysqli -> connect_error);
             exit();
          }
-         printf('Connected successfully.<br />');
+//         printf('Connected successfully.<br />');
          return $mysqli;
 //         $mysqli -> close();
 ?>
