@@ -2,15 +2,9 @@
 
 include_once('../connection/conn.php');
 
-//mysqli_select_db($conn, $database);
-//class Loginuser extends DBconnection {
-//    public function __construct() {
-//        parent::__construct();
-//echo mysqli_select_db($mysqli, $database);
 
     if (isset($_REQUEST['action']) && !empty($_REQUEST['action'])) {
         $action = $_REQUEST['action'];
-//        global $mysqli;
     switch ($action) {
         
         case "checkLogin":
