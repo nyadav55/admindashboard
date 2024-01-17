@@ -1,4 +1,8 @@
-function loginuser() {
+  $(document).ready(function () {
+    
+     displayallUser();
+     
+    function displayallUser() {
     var username = $('#uname').val()
     alert("username "+username);
             $.ajax({
@@ -7,9 +11,8 @@ function loginuser() {
                 dataType: "html",
                 async: true,
                 success: function(data) {
-                    alert(data);
-                    window.location = "http://localhost/crudapp/view/dashboard.php";
-//                    $('#result').html(data);
+                    $("#displayresult").html(data);
                 }
             });
 }
+});

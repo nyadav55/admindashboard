@@ -14,13 +14,13 @@
     <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Link 1</a>
+        <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link 2</a>
+        <a class="nav-link" href="#">Project</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link 3</a>
+        <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>
   </div>
@@ -38,60 +38,62 @@
                 <h4 class=" text-primary">All Records</h4>
             </div>
             <div class="col-lg-6">
-                <button type="button" class="btn btn-primary m-1 float-right">
-                    <i class="fas fa-user-plus fa-lg"></i>&nbsp;&nbsp; Add New User
+                <button type="button" class="btn btn-primary m-1 float-right" id="addnewUser">
+                    <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp; Add New User
                 </button>
-                <a href="#" class="btn btn-success m-1 float-right">
-                    <i class="fas fa-table fa-lg"></i>&nbsp;&nbsp; Export
-                </a> 
+                 
             </div>
         </div>
         <hr>
         <div class="row">
             <div class="col-lg-12">
                 <div class="table-responsive" id="displayUser">
-                    <table class="table table-striped table-sm table-dashboard">
-                        <thead>
-                            <tr class="text-center">
-                                <th>1</th>
-                                <th>1</th>
-                                <th>Action</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php for($i=1; $i<=10; $i++) { ?>
-                            <tr class="text-center text-secondary">
-                                <td>User</td>
-                                <td>User</td>
-                                <td>
-                                    <a href="#" title="View" class="text-success">
-                                        <i class="fas fa-info-circle fa-lg"></i>
-                                    </a>&nbsp;&nbsp;
-                                    <a href="#" title="Edit" class="text-primary">
-                                        <i class="fas fa-edit fa-lg"></i>
-                                    </a>&nbsp;&nbsp;
-                                    <a href="#" title="Delete" class="text-success">
-                                        <i class="fas fa-trash-alt fa-lg"></i>
-                                    </a>&nbsp;
-                                </td>
-                            </tr>
-                          <?php  } ?>
-                        </tbody>
-                    </table>
+                    <!--<p id="xxx">Testing</p>--> 
                 </div>
             </div>
         </div>
     </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!--<script src="https://kit.fontawesome.com/a076d05399.js"></script>-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!--Data Table-->
+<!--    <script src="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>-->
+
+
+
   <script type="text/javascript">
   $(document).ready(function () {
-     $("table").DataTable(); 
+    
+     displayallUser();
+     
+     function displayallUser () {
+         $.ajax({
+             type: "GET",
+            url: "../controller/logicdata.php?action=getUserdata",
+            dataType: "html",
+                async: true,
+                success: function (data) {
+                    $('#displayUser').html(data);
+                        }
+         });
+     }
   });
+
+//----------- Add New User Event ----------
+document.getElementById("addnewUser").onclick = function () {
+        location.href = "http://localhost/crudapp/view/addnewuser.php";
+};
   </script>
+</body>
+<head>
+
+</head>
+<body>
+
+<i class="fa fa-car"></i>
+
 </body>
 </html>
